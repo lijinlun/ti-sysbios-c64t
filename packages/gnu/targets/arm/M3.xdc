@@ -32,7 +32,7 @@ metaonly module M3 inherits IM {
     };
 
     readonly config ITarget2.Command ccBin = {
-        cmd: "bin/arm-none-eabi-gcc -c -MD -MF $@.dep",
+        cmd: "bin/arm-linux-gnueabi-gcc -c -MD -MF $@.dep",
         opts: "-mcpu=cortex-m3 -mthumb -mabi=aapcs -g"
     };
 
@@ -42,7 +42,7 @@ metaonly module M3 inherits IM {
     };
 
     readonly config ITarget2.Command asmBin = {
-        cmd: "bin/arm-none-eabi-gcc -c -x assembler-with-cpp",
+        cmd: "bin/arm-linux-gnueabi-gcc -c -x assembler-with-cpp",
         opts: "-Wa,-mcpu=cortex-m3 -Wa,-mthumb"
     };
 
