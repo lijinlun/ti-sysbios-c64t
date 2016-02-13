@@ -75,8 +75,8 @@ TARGET_INC = -I"`File.getDOSPath(xdc.loadPackage('ti.targets').packageRepository
 INCS = $(BIOS_INC) $(TARGET_INC) `Build.getIncludePaths()`
 
 %if (TARGET.$name.match(/gnu/)) {
-CC = `CGEN`/`TARGET.ccBin.cmd` $(CCOPTS) -I `CGEN`/include
-ASM = `CGEN`/`TARGET.asmBin.cmd` $(CCOPTS) -I `CGEN`/include
+CC = `CGEN`/`TARGET.ccBin.cmd` $(CCOPTS) -I `CGEN`/arm-none-eabi/include
+ASM = `CGEN`/`TARGET.asmBin.cmd` $(CCOPTS) -I `CGEN`/arm-none-eabi/include
 AR = `CGEN`/`TARGET.arBin.cmd` `TARGET.ar.opts`
 %}
 %else {
