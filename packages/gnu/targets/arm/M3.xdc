@@ -32,7 +32,7 @@ metaonly module M3 inherits IM {
     };
 
     readonly config ITarget2.Command ccBin = {
-        cmd: "bin/arm-none-abi-gcc -c -MD -MF $@.dep",
+        cmd: "bin/arm-none-eabi-gcc -c -MD -MF $@.dep",
         opts: "-mcpu=cortex-m3 -mthumb -mabi=aapcs -g"
     };
 
