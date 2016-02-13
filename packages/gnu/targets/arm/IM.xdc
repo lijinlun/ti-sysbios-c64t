@@ -29,7 +29,7 @@ metaonly interface IM inherits gnu.targets.arm.ITarget {
     override readonly config string rts = "gnu.targets.arm.rtsv7M";
     override config string platform     = "ti.platforms.tiva:LM4F232H5QD";
 
-    override config string GCCTARG = "arm-linux-gnueabi";
+    override config string GCCTARG = "arm-none-eabi";
 
     override readonly config String stdInclude = "gnu/targets/arm/std.h";
 
@@ -48,7 +48,7 @@ metaonly interface IM inherits gnu.targets.arm.ITarget {
     };
 
     readonly config ITarget2.Command arBin = {
-        cmd: "bin/arm-linux-gnueabi-ar ",
+        cmd: "bin/arm-none-eabi-ar ",
         opts: ""
     };
 
